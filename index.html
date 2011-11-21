@@ -8,20 +8,20 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #a82c9c;
+      background-color: #ffffff;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
+      color: #000000;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #57d363; margin-bottom: 3px; }
+    h1 { font-size: 3.8em; color: #7b8288; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #57d363; }
-    h3 { text-align: center; color: #57d363; }
-    a { color: #57d363; }
+    h2 { font-size: 1.5em; color: #7b8288; }
+    h3 { text-align: center; color: #7b8288; }
+    a { color: #7b8288; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
@@ -42,30 +42,33 @@
         <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="https://github.com/gnebehay/OpenTLD">OpenTLD</a>
-      <span class="small">by <a href="https://github.com/gnebehay">gnebehay</a></span></h1>
+    <h1><a href="https://github.com/gnebehay/OpenTLD">OpenTLD</a></h1>
 
     <div class="description">
-      Official source code for TLD
+      A C++ implementation of OpenTLD<br />
+	brought to you by<br />
+	<a href="http://www.ait.ac.at"><img border="0" src="ait_logo.jpg"></a><a href="http://www.epics-project.eu"><img border="0" src="logo_epics.gif"></a>
+
     </div>
 
-    
+    <h2>Description</h2>
+    <p>
+This is a C++ implementation of OpenTLD that was originally published in MATLAB by Zdenek Kalal. OpenTLD is used for
+tracking objects in video streams. What makes this algorithm outstanding is that it does not make use of any training
+data. This implementation is based solely on open source libraries, meaning that you do not need any commercial
+products to compile or run it.
 
-    
+The easiest way to get started is to download the precompiled binaries that are available for Windows and Ubuntu
+(other Debian-based systems might work as well). You can get a .deb package from <a href="http://dl.dropbox.com/u/8715460/tld.deb">here</a> 
+and a windows installer file from <a href="http://dl.dropbox.com/u/8715460/tld-setup.exe">here</a>.
 
-    
 
+If you have a webcam attached to your PC, you can simply execute tld (on Ubuntu) or tld.exe (on Windows) in order to
+try it out. For other configuration options, please have a look at the <a href="https://github.com/gnebehay/OpenTLD">README</a> file.
+    </p>
     
-
-    
-      <h2>Authors</h2>
-      <p>Georg Nebehay (georg.nebehay.fl@ait.ac.at)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Georg Nebehay (georg.nebehay.fl@ait.ac.at)<br/>      </p>
-    
+    <p>Please understand that this software is meant as a demonstration of what state-of-the-art computer vision algorithms are currently
+    capable of and not as a ready-to-use product. If you find errors in the program, please report them at the GitHub issues page.
 
     <h2>Download</h2>
     <p>
@@ -82,7 +85,10 @@
       get the source code on GitHub : <a href="https://github.com/gnebehay/OpenTLD">gnebehay/OpenTLD</a>
     </div>
 
-  </div>
+        <h2>Contact</h2>
+      <p>Georg Nebehay (georg.nebehay.fl [at] ait.ac.at)
+<br/>      </p>
+    
 
 </body>
 </html>
