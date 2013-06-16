@@ -36,13 +36,15 @@ A documentation of the internals as well as other possibly helpful information i
 ### option arguments
 * `[-a <startFrameNumber>]` video starts at the frameNumber _startFrameNumber_
 * `[-b <x,y,w,h>]` Initial bounding box
-* `[-d <device>]` select input device: _device_=(IMGS|CAM|VID)  
+* `[-d <device>]` select input device: _device_=(IMGS|CAM|VID|STREAM)  
 	_IMGS_: capture from images  
 	_CAM_: capture from connected camera  
-	_VID_: capture from a video
+	_VID_: capture from a video  
+	_STREAM_: capture from RTSP stream
 * `[-e <path>]` export model after run to _path_
 * `[-f]` shows foreground
 * `[-i <path>]` _path_ to the images or to the video.
+* `[-j <number>]` show trajectory for the last _number_ frames
 * `[-h]` shows help
 * `[-m <path>]` if specified load a model from _path_. An initialBoundingBox must be specified or selectManually must be true.
 * `[-n <number>]` Specifies the video device to use (defaults to 0). Useful to select a different camera when multiple cameras are connected.
