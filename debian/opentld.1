@@ -124,7 +124,7 @@
 .\" ========================================================================
 .\"
 .IX Title "OpenTLD 1"
-.TH OpenTLD 1 "2012-05-01" "0.1.2" "C++ implementation of OpenTLD"
+.TH OpenTLD 1 "2013-07-10" "1.4.0" "C++ implementation of OpenTLD"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -134,8 +134,9 @@ OpenTLD \- an object tracking program.
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
 \&\fBopentld\fR [\fB\-a\fR <startFrameNumber>] [\fB\-b\fR <x,y,w,h>] [\fB\-d\fR <device>] [\fB\-e\fR
-<path>] [\fB\-f\fR] [\fB\-i\fR <path>] [\fB\-h\fR] [\fB\-m\fR <path>] [\fB\-n\fR <number>] [\fB\-p\fR
-<path>] [\fB\-s\fR] [\fB\-t\fR <theta>] [\fB\-z\fR <lastFrameNumber>] [<configfile>]
+<path>] [\fB\-f\fR] [\fB\-i\fR <path>] [\fB\-j\fR <path>] [\fB\-h\fR] [\fB\-m\fR <path>] [\fB\-n\fR
+<number>] [\fB\-p\fR <path>] [\fB\-s\fR] [\fB\-t\fR <theta>] [\fB\-z\fR <lastFrameNumber>]
+[<configfile>]
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"
 \&\fBOpenTLD\fR is a \*(C+ implementation of OpenTLD that was originally published in
@@ -159,6 +160,7 @@ try it out.
       \s-1IMGS:\s0 capture from images
       \s-1CAM:\s0 capture from connected camera
       \s-1VID:\s0 capture from a video
+      \s-1STREAM:\s0 capture from \s-1RTSP\s0 stream
 .PP
 \&\fB\-e\fR <path>
       export model after run to <path>
@@ -168,6 +170,9 @@ try it out.
 .PP
 \&\fB\-i\fR <path>
       <path> to the images or to the video
+.PP
+\&\fB\-j\fR <number>
+      show trajectory for the last number frames
 .PP
 \&\fB\-h\fR
       shows help

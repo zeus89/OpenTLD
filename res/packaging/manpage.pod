@@ -5,8 +5,9 @@ OpenTLD - an object tracking program.
 =head1 SYNOPSIS
 
 B<opentld> [B<-a> <startFrameNumber>] [B<-b> <x,y,w,h>] [B<-d> <device>] [B<-e>
-<path>] [B<-f>] [B<-i> <path>] [B<-h>] [B<-m> <path>] [B<-n> <number>] [B<-p>
-<path>] [B<-s>] [B<-t> <theta>] [B<-z> <lastFrameNumber>] [<configfile>]
+<path>] [B<-f>] [B<-i> <path>] [B<-j> <path>] [B<-h>] [B<-m> <path>] [B<-n>
+<number>] [B<-p> <path>] [B<-s>] [B<-t> <theta>] [B<-z> <lastFrameNumber>]
+[<configfile>]
 
 =head1 DESCRIPTION
 
@@ -32,6 +33,7 @@ B<-d> <device>
       IMGS: capture from images
       CAM: capture from connected camera
       VID: capture from a video
+      STREAM: capture from RTSP stream
 
 B<-e> <path>
       export model after run to <path>
@@ -41,6 +43,9 @@ B<-f>
 
 B<-i> <path>
       <path> to the images or to the video
+
+B<-j> <number>
+      show trajectory for the last number frames
 
 B<-h>
       shows help
