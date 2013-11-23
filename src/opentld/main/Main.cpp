@@ -76,6 +76,11 @@ void Main::doWork()
     if(printResults != NULL)
     {
         resultsFile = fopen(printResults, "w");
+        if(!resultsFile)
+        {
+            fprintf(stderr, "Error: Unable to create results-file \"%s\"\n", printResults);
+            exit(-1);
+        }
     }
 
     bool reuseFrameOnce = false;
@@ -287,5 +292,10 @@ void Main::doWork()
     if(exportModelAfterRun)
     {
         tld->writeToFile(modelExportFile);
+    }
+
+    if(resultsFile)
+    {
+        fclose(resultsFile);
     }
 }

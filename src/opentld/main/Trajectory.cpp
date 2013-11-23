@@ -30,7 +30,8 @@ using namespace std;
 namespace tld
 {
 
-Trajectory::Trajectory()
+Trajectory::Trajectory() :
+    m_length(0)
 {
 }
 

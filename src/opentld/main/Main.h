@@ -84,6 +84,10 @@ public:
         exportModelAfterRun = false;
         modelExportFile = "model";
         seed = 0;
+
+        gui = NULL;
+        modelPath = NULL;
+        imAcq = NULL;
     }
 
     ~Main()
