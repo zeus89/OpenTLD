@@ -51,7 +51,7 @@ void Clustering::release()
     numWindows = 0;
 }
 
-void Clustering::calcMeanRect(vector<int> * indices)
+void Clustering::calcMeanRect(std::vector<int> * indices)
 {
 
     float x, y, w, h;
@@ -87,7 +87,7 @@ void Clustering::calcDistances(float *distances)
 {
     float *distances_tmp = distances;
 
-    vector<int> confidentIndices = *detectionResult->confidentIndices;
+    std::vector<int> confidentIndices = *detectionResult->confidentIndices;
 
     size_t indices_size = confidentIndices.size();
 
