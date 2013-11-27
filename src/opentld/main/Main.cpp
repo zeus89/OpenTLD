@@ -108,6 +108,11 @@ void Main::doWork()
 
         if(!reuseFrameOnce)
         {
+            if(img)
+            {
+                cvReleaseImage(&img);
+                img = NULL;
+            }
             img = imAcqGetImg(imAcq);
 
             if(img == NULL)
@@ -282,11 +287,18 @@ void Main::doWork()
         if(!reuseFrameOnce)
         {
             cvReleaseImage(&img);
+            img = NULL;
         }
         else
         {
             reuseFrameOnce = false;
         }
+    }
+
+    if(img)
+    {
+        cvReleaseImage(&img);
+        img = NULL;
     }
 
     if(exportModelAfterRun)
