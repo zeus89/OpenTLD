@@ -93,6 +93,10 @@ void TLD::selectObject(const Mat &img, Rect *bb)
     detectorCascade->init();
 
     currImg = img;
+    if(!currBB)
+    {
+        delete currBB;
+    }
     currBB = tldCopyRect(bb);
     currConf = 1;
     valid = true;
@@ -145,6 +149,10 @@ void TLD::fuseHypotheses()
     if(trackerBB != NULL)
     {
         float confTracker = nnClassifier->classifyBB(currImg, trackerBB);
+        if(!currBB)
+        {
+            delete currBB;
+        }
 
         if(numClusters == 1 && confDetector > confTracker && tldOverlapRectRect(*trackerBB, *detectorBB) < 0.5)
         {
@@ -169,6 +177,10 @@ void TLD::fuseHypotheses()
     }
     else if(numClusters == 1)
     {
+        if(!currBB)
+        {
+            delete currBB;
+        }
         currBB = tldCopyRect(detectorBB);
         currConf = confDetector;
     }

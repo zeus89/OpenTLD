@@ -50,6 +50,8 @@ DetectionResult::DetectionResult()
 DetectionResult::~DetectionResult()
 {
     release();
+    delete fgList;
+    fgList = NULL;
 }
 
 void DetectionResult::init(int numWindows, int numTrees)
