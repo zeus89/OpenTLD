@@ -613,6 +613,7 @@ void TLD::readFromFile(const char *path)
 
     ec->initFeatureOffsets();
 
+    fclose(file);
 }
 
 
